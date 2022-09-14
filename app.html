@@ -78,7 +78,62 @@
     </nav>
     <!-- MAIN Section -->
     <main class="flex-shrink-0">
-      <div class="container"></div>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 col-md-5">
+            <h2 class="border-1 border-bottom border-dark">
+              Double Bubble: A Coding Project
+            </h2>
+            <h5 class="lead">
+              Everyone talking at the same time is double trouble.. no.. Double
+              Bubble! This is a javascript coding exercise using loops. We print
+              numbers from 0 to 100 and for multiples of the values provided by
+              the user, we display "Double" for the first value and "Bubble" for
+              the second value. For multiples of both, we display "Double
+              Bubble".
+            </h5>
+            <h4 class="border-1 border-bottom border-dark mt-5">
+              Instructions
+            </h4>
+            <p>
+              Input the values that you want to check against to generate the
+              Double Bubbles. Hit the button and watch the magic happen.
+            </p>
+          </div>
+          <div class="col-12 col-md-7">
+            <form class="row">
+              <div class="col-6">
+                <h6>Enter the "Double" value</h6>
+                <input
+                  id="doubleValue"
+                  class="form-control"
+                  type="number"
+                  placeholder="3"
+                  aria-label="Double Value"
+                />
+              </div>
+              <div class="col-6">
+                <h6>Enter the "Bubble" value</h6>
+                <input
+                  id="bubbleValue"
+                  class="form-control"
+                  type="number"
+                  placeholder="5"
+                  aria-label="Bubble Value"
+                />
+              </div>
+              <div class="col-12 mt-2 d-flex justify-content-end">
+                <button id="btnSubmit" class="btn btnOrange" type="button">
+                  Double the Bubbles!
+                </button>
+              </div>
+            </form>
+            <div class="col-12 mt-5">
+              <h4 class="border-1 border-bottom border-dark">Results</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- FOOTER Section -->
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
