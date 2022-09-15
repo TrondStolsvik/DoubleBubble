@@ -109,6 +109,7 @@
                   class="form-control"
                   type="number"
                   placeholder="3"
+                  value="3"
                   aria-label="Double Value"
                 />
               </div>
@@ -119,6 +120,7 @@
                   class="form-control"
                   type="number"
                   placeholder="5"
+                  value="5"
                   aria-label="Bubble Value"
                 />
               </div>
@@ -147,6 +149,24 @@
         </div>
       </div>
     </main>
+    <!-- Template Section -->
+    <template id="dbTemplate">
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+    </template>
     <!-- FOOTER Section -->
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
       <div class="container-fluid">
@@ -205,5 +225,8 @@
 
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
+    <script>
+      document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
   </body>
 </html>
