@@ -80,9 +80,9 @@ p {
   background-color: var(--orange);
 }
 
-.double,
-.bubble,
-.doubleBubble {
+.Double,
+.Bubble,
+.DoubleBubble {
   font-weight: bold;
   color: var(--blue);
 }

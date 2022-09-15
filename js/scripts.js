@@ -32,7 +32,7 @@ function doubleBubble(dValue, bValue) {
     //If-else evaluate each number against zero modulus of the parameters dValue and bValue
     //First evaluate against both and push "Double Bubble" if true
     if (i % dValue == 0 && i % bValue == 0) {
-      returnArray.push("DoubleBubble!");
+      returnArray.push("DoubleBubble");
       //Else-if evaluate against dValue and push "Double" if true
     } else if (i % dValue == 0) {
       returnArray.push("Double");

@@ -123,7 +123,7 @@
                     //If-else evaluate each number against zero modulus of the parameters dValue and bValue
                     //First evaluate against both and push "Double Bubble" if true
                     if (i % dValue == 0 && i % bValue == 0) {
-                      returnArray.push("DoubleBubble!");
+                      returnArray.push("DoubleBubble");
                       //Else-if evaluate against dValue and push "Double" if true
                     } else if (i % dValue == 0) {
                       returnArray.push("Double");
@@ -183,11 +183,56 @@
             </pre>
           </div>
           <div class="col-12 col-md-4">
-            <p>The Code is structured in one function.</p>
-            <h5>HelloWorld()</h5>
+            <p>The Code is structured in three functions.</p>
+            <h5>getValues()</h5>
             <p>
-              HelloWorld() is a function that displays an alert with a message
-              of "Hello World!"
+              We start by declaring our variables as doubleValue and bubbleValue
+              so that we can store the inputs that you want to run the program
+              with.<br /><br />Next we parse the variables as integers and test
+              if they are in fact integers. If they are, we call our
+              doubleBubble() function and store it's data in our newly declared
+              variable dbData. We pass this data to our displayData() function
+              so that we can display our table on the page.<br /><br />If either
+              of the inputs do not evaluate to a number, we display an alert
+              prompting the user to input integers.
+            </p>
+            <h5>doubleBubble()</h5>
+            <p>
+              The doubleBubble() function is passed the data from the page
+              input. We declare a variable named returnArray to store our
+              information, whether it's a number or a string.<br /><br />We run
+              a for-loop from 1 to 100, iterating 1 number at a time. Inside the
+              loop we check with an if-else statement against the input values
+              from the page.<br /><br />First we check if the number of the
+              current iteration of the loop matches <b>both</b> the "Double
+              value" AND the "Bubble value" and if it does, we push the string
+              "DoubleBubble!" to the array.<br /><br />Next, for the numbers
+              that don't match both values, we check them against one at a time,
+              first the "Double value" (dValue) and then "Bubble value" (bValue)
+              and push "Double" or "Bubble" respectively.<br /><br />If the
+              number matches neither of the checks, we push the number.<br /><br />Finally
+              we return returnArray.
+            </p>
+            <h5>displayData()</h5>
+            <p>
+              For displaying the data on the page, we start with declaring two
+              variables, tableBody and templateRow to store the contents of our
+              "results" ID and "dbTemplate" ID respectively.<br /><br />We also
+              need to clear the HTML before we proceed to inject any data to
+              it.<br /><br />Now we start a for-loop from 0 and run it for the
+              length of dbData, which we know to be our entire array of numbers
+              and strings. We increment this loop 5 steps at a time, because we
+              have 5 columns to inject each time.<br /><br />Each time the loop
+              iterates we declare the variables tableRow and rowCols anew, to
+              hold the templateRow and tableRow content respectively. See the
+              rowCols variable only takes the "td" elements from the
+              tableRow.<br /><br />Next we have a model of the row we are
+              injecting. Remember for each iteration we are injecting 5 columns
+              and here we add a class to the "td" element that matches the
+              number or string and we have the strings styled with CSS to make
+              them bold and colored. After adding the class we add the actual
+              data to be displayed to the table.<br /><br />Finally we append
+              the child of the tableRow variable to the tableBody.
             </p>
           </div>
         </div>
