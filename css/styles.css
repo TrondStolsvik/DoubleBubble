@@ -79,3 +79,10 @@ p {
 .btnOrange {
   background-color: var(--orange);
 }
+
+.double,
+.bubble,
+.doubleBubble {
+  font-weight: bold;
+  color: var(--blue);
+}
