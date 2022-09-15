@@ -6,13 +6,13 @@ function getValues() {
 
   //Parse to integers
   doubleValue = parseInt(doubleValue);
-  bubbleValue = parseInt(doubleValue);
+  bubbleValue = parseInt(bubbleValue);
 
   //Validate that the values are integers and if-else to test the truth of the values
   //Inside if-else call doubleBubble()
   if (Number.isInteger(doubleValue) && Number.isInteger(bubbleValue)) {
     //Declare variable dbData and set to the value of doubleBubble(doubleValue, bubbleValue)
-    dbData = doubleBubble(doubleValue, bubbleValue);
+    let dbData = doubleBubble(doubleValue, bubbleValue);
 
     //Call displayData(dbData)
     displayData(dbData);
@@ -27,22 +27,19 @@ function doubleBubble(dValue, bValue) {
   //Declare a blank array as returnArray
   let returnArray = [];
 
-  //For-loop from 0 to 100
-  for (let i = 0; i <= 100; i++) {
+  //For-loop from 1 to 100
+  for (let i = 1; i <= 100; i++) {
     //If-else evaluate each number against zero modulus of the parameters dValue and bValue
     //First evaluate against both and push "Double Bubble" if true
     if (i % dValue == 0 && i % bValue == 0) {
-      i = "Double Bubble!";
-      returnArray.push(i);
+      returnArray.push("DoubleBubble!");
       //Else-if evaluate against dValue and push "Double" if true
     } else if (i % dValue == 0) {
-      i = "Double";
-      returnArray.push(i);
+      returnArray.push("Double");
       //Else-if evaluate against bValue and push "Bubble" if true
     } else if (i % bValue == 0) {
-      i = "Bubble";
-      returnArray.push(i);
-      //Else-if push the i-value
+      returnArray.push("Bubble");
+      //Else-if push the i value
     } else {
       returnArray.push(i);
     }
@@ -64,10 +61,10 @@ function displayData(dbData) {
   //For-loop to append rows to the table
   for (i = 0; i < dbData.length; i += 5) {
     //Declare a variable tableRow and store the content of the row from the template
-    const tableRow = document.importNode(templateRow.content, true);
+    let tableRow = document.importNode(templateRow.content, true);
 
     //Declare a variable rowCols and store only the "td" elements
-    rowCols = tableRow.querySelectorAll("td");
+    let rowCols = tableRow.querySelectorAll("td");
 
     //Model the row one column at a time and add a class to each column based on data in dbData
     //Next store the content of the column as the data in dbData
